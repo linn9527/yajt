@@ -3,11 +3,11 @@
         <h1><a href="#" data-target="slide-out" class="show-menu button-collapse sidenav-trigger">{{site.name}}</a></h1>
     </div>
     <ul>
-        <li><a href="{{site.home_url}}"><i class="icon-home"></i></a></li>
-        <li><a href="{{site.archive_url}}"><i class="icon-file-archive"></i></a></li>
-        <li><a href="{{site.tags_url}}"><i class="icon-tags"></i></a></li>
-        <li><a href="{{site.books_url}}"><i class="icon-book"></i></a></li>
-        <li><a href="{{site.about_url}}"><i class="icon-user"></i></a></li>
-        <li><a href="{{site.rss_url}}"><i class="icon-rss"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.home_url}}"><i class="icon-home"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.archive_url}}"><i class="icon-file-archive"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.tags_url}}"><i class="icon-tags"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.books_url}}"><i class="icon-book"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.about_url}}"><i class="icon-user"></i></a></li>
+        <li><a href="{{ site.baseurl }}{{site.rss_url}}"><i class="icon-rss"></i></a></li>
     </ul>
 </header>
