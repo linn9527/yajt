@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="article">
+    <header class="article-header">
+    <h1 class="article-title"><a href="#">{{ page.title }}</a></h1>
+        <p class="article-meta">
+        	<i>{{ page.date | date: "%Y-%m-%d" }}</i>&nbsp&nbsp&nbsp
+        	{% for tag in page.tags %}&nbsp&nbsp<i >#{{ tag }}</i>{% endfor %}
+        </p>
+        <!-- Picture -->
+        {% if page.background %}
+        <img class="materialboxed article-pic" width="100%" src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
+        {% else %}
+        {% endif %}
+    </header>
+    <article class="article-content markdown-body">
+        {{ content }}
+    </article>
+    {% include disqus.html %}
+    <footer></footer>
+</div>

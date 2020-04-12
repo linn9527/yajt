@@ -1,0 +1,29 @@
+# Site settings
+title: Yet Another Jekyll Theme
+email: mail@mail.com
+name: ultra mollusk
+description: 念念不忘 必有回响
+url: https://yajt.orz.xyz # the base hostname & protocol for your site
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+
+rss_url: /feed.xml
+archive_url: /archive/
+tags_url: /tags/
+about_url: /about/
+home_url: /index.html
+
+# Build settings
+# markdown: redcarpet
+
+#Personal Info
+author:
+  name: 小弱鸡
+  full_name: ToddLam
+  link: https://yajt.orz.xyz
+  github: https://github.com/toddlam/
+  email: toddylin@hotmail.com
+
+#Disqus
+disqus:
+  url: xxx.disqus.com

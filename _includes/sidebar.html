@@ -1,0 +1,53 @@
+<div class="sidebar">
+    <div id="slide-out" class="sidenav">
+        <div class="contact">
+            <header class="head">
+                <h1>{{ site.author.full_name }}</h1> {{site.name}}
+            </header>
+			<footer class="foot"></footer>
+			<div class="row" style="margin-bottom: 0px;">
+				<div class="body col s3">
+					<a href="mailto:toddylin@hotmail.com"><i class="emoji icon-mail"></i></a>
+				</div>
+				<div class="body col s3">
+					<a href="tencent://message/?Uin=1016954699&websiteName=orz.xyz=&Menu=yes"><i class="emoji icon-qq"></i></a>
+				</div>
+				<div class="body col s3">
+					<a href="http://weibo.com/2079271711/profile?topnav=1&wvr=6" target=_blank><i class="emoji icon-weibo"></i></a>
+				</div>
+				<div class="body col s3">
+					<a href="#" onclick="javascript:addFavorite()"><i class="emoji icon-emo-beer"></i></a>
+				</div>
+			</div>
+            <footer class="foot">
+            </footer>
+        </div>
+        <!--侧边栏-->
+        <div>
+            <ul class="collapsible sidebar-categorys" data-collapsible="accordion">
+                <!--分类-->
+                {% for category in site.categories %}
+                <li>
+                    <div class="collapsible-header"><span class="emoji"></span>&nbsp;&nbsp;&nbsp;{{ category[0] }}</div>
+                    <div class="collapsible-body">
+                        <dl class="sidebar-category">
+                            {% for post in category[1] %}
+                            <dd class="sidebar-item">
+                                <div class="waves-effect sidenav-close" style="width: 100%;height: 100%;">
+                                    <a class="plink" href='{{ post.url }}'>
+                                        {{post.title}}
+                                    </a>
+                                </div>
+                            </dd>
+                            {% endfor %}
+                        </dl>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="progress blue accent-1" style="position:fixed;top:0;margin: 0 0;">
+        <div class="determinate blue accent-3" style="width: 0"></div>
+    </div>
+</div>

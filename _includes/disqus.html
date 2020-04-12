@@ -1,0 +1,11 @@
+<div id="disqus_thread" class='row'>
+    <a href="javascript:loadDisqus();" class='col s12 btn_flat' style="text-align:center;"><i class="icon-chat small silver-block text-lighten-1"></i></a>
+</div>
+<script>
+    function loadDisqus() {
+        var d = document, s = d.createElement('script');
+        s.src = '//{{site.disqus.url}}/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+</script>

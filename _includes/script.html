@@ -1,0 +1,79 @@
+<script type="text/javascript" src="{{ " /public/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ " /public/js/jquery.pjax.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ " /public/js/materialize.min.js " | prepend: site.baseurl }}"></script>
+<script>
+	window.space = {};
+	$(function () {
+		// 随机表情
+		window.space.emoji = new Array(
+			'icon-emo-angry',
+			'icon-emo-beer',
+			'icon-emo-coffee',
+			'icon-emo-cry',
+			'icon-emo-devil',
+			'icon-emo-displeased',
+			'icon-emo-grin',
+			'icon-emo-happy',
+			'icon-emo-laugh',
+			'icon-emo-saint',
+			'icon-emo-shoot',
+			'icon-emo-sleep',
+			'icon-emo-squint',
+			'icon-emo-sunglasses',
+			'icon-emo-surprised',
+			'icon-emo-thumbsup',
+			'icon-emo-tongue ',
+			'icon-emo-unhappy',
+			'icon-emo-wink',
+			'icon-emo-wink2'
+		);
+		window.space.emoji_count = window.space.emoji.length
+		$(".emoji").each(function () {
+				var temp = Math.floor(Math.random() * space.emoji_count);
+				$(this).addClass(space.emoji[temp]);
+			})
+			//$('#audio')[0].play();
+		$('.sidenav').sidenav();
+		$('.collapsible').collapsible({accordion: false});
+		$('.carousel').carousel();
+		// 初始化pjax
+		$(document).pjax('a.plink', '#content', {
+			fragment: "#content",
+			timeout: 10000
+		});
+		// $(document).on('pjax:beforeSend',function(){
+		// 	$('#audio')[0].autoplay = false;
+		// });
+		// $(document).on('pjax:complete', function() {
+		//	$('a.show-menu').click();
+		// });
+
+		// 初始化进度条
+		$(".determinate").width("100%");
+		// 载入内容
+		$("#content").show();
+	});
+	console.log('Wellcome to Todd Lam\'s Bloger!');
+
+	// 添加收藏夹代码
+	function addFavorite() {
+		var url = 'https://me.orz.xyz/';
+		var title = document.title;
+		var ua = navigator.userAgent.toLowerCase();
+		if (ua.indexOf("360se") > -1) {
+			alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+		} else if (ua.indexOf("msie 8") > -1) {
+			window.external.AddToFavoritesBar(url, title); //IE8
+		} else if (document.all) {
+			try {
+				window.external.addFavorite(url, title);
+			} catch (e) {
+				alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+			}
+		} else if (window.sidebar) {
+			window.sidebar.addPanel(title, url, "");
+		} else {
+			alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+		}
+	}
+</script>
