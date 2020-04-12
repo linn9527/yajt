@@ -34,7 +34,7 @@
                             {% for post in category[1] %}
                             <dd class="sidebar-item">
                                 <div class="waves-effect sidenav-close" style="width: 100%;height: 100%;">
-                                    <a class="plink" href='{{ post.url }}'>
+                                    <a class="plink" href='{{ site.baseurl }}{{ post.url }}'>
                                         {{post.title}}
                                     </a>
                                 </div>
