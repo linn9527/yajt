@@ -3,7 +3,7 @@ title: Yet Another Jekyll Theme
 email: mail@mail.com
 name: ultra mollusk
 description: 念念不忘 必有回响
-url: https://yajt.orz.xyz # the base hostname & protocol for your site
+url: https://toddlam.github.io/yajt/ # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title.html
 paginate: 10
 
@@ -20,7 +20,7 @@ home_url: /index.html
 author:
   name: 小弱鸡
   full_name: ToddLam
-  link: https://yajt.orz.xyz
+  link: https://toddlam.github.io/yajt/
   github: https://github.com/toddlam/
   email: toddylin@hotmail.com
   qq: 10086
