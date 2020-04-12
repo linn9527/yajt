@@ -2,6 +2,15 @@
 <script type="text/javascript" src="{{ "/public/js/jquery.pjax.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/public/js/materialize.min.js" | prepend: site.baseurl }}"></script>
 <script>
+	(function(){
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register("{{ "/sw.js" | prepend: site.baseurl }}")
+				.then(function() { 
+					console.log('Service Worker Registered'); 
+				});
+		}    
+	})();
 	window.space = {};
 	$(function () {
 		// 随机表情
