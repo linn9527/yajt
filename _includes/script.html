@@ -2,15 +2,6 @@
 <script type="text/javascript" src="{{ "/public/js/jquery.pjax.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/public/js/materialize.min.js" | prepend: site.baseurl }}"></script>
 <script>
-	(function(){
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker
-				.register("{{ "/sw.js" | prepend: site.baseurl }}")
-				.then(function() { 
-					console.log('Service Worker Registered'); 
-				});
-		}    
-	})();
 	window.space = {};
 	$(function () {
 		// 随机表情
@@ -64,6 +55,15 @@
 	});
 	console.log('Wellcome to Todd Lam\'s Bloger!');
 
+	(function(){
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register("{{ "/sw.js" | prepend: site.baseurl }}")
+				.then(function() { 
+					console.log('Service Worker Registered'); 
+				});
+		}    
+	})();
 	// 添加收藏夹代码
 	function addFavorite() {
 		var url = 'https://me.orz.xyz/';
