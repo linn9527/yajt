@@ -55,15 +55,15 @@
 	});
 	console.log('Wellcome to Todd Lam\'s Bloger!');
 
-	(function(){
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker
-				.register("{{ "/sw.js" | prepend: site.baseurl }}")
-				.then(function() { 
-					console.log('Service Worker Registered'); 
-				});
-		}    
-	})();
+	// (function(){
+	// 	if ('serviceWorker' in navigator) {
+	// 		navigator.serviceWorker
+	// 			.register("{{ "/sw.js" | prepend: site.baseurl }}")
+	// 			.then(function() { 
+	// 				console.log('Service Worker Registered'); 
+	// 			});
+	// 	}    
+	// })();
 	// 添加收藏夹代码
 	function addFavorite() {
 		var url = 'https://me.orz.xyz/';
